@@ -29,10 +29,20 @@ int IntNodeArray :: getFromIndex(int index){
     
     IntNode * current = front;
     for(int posistion = 0; posistion < index; posistion++){
-        
+        current = current->getNodePointer();
     }
     
     value = current->getNodeData();
     
     return value;
+}
+
+void setAtIndex(int index, int value){
+    assert(index >= 0 && index < size);
+    
+    IntNode * current = front;
+    
+    for(int spot = 0; spot < index; spot++){
+        current = current
+    }
 }
