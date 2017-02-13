@@ -34,6 +34,7 @@
 		37D734DA1E4BB86C0074B516 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = MegaData/Model/IntNode.hpp; sourceTree = "<group>"; };
 		37D734DB1E4BB86C0074B516 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = MegaData/Model/IntNodeArray.cpp; sourceTree = "<group>"; };
 		37D734DC1E4BB86C0074B516 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = MegaData/Model/IntNodeArray.hpp; sourceTree = "<group>"; };
+		37E76B4C1E523E66000018B6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = MegaData/Model/Node.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 				37D734DA1E4BB86C0074B516 /* IntNode.hpp */,
 				37D734DB1E4BB86C0074B516 /* IntNodeArray.cpp */,
 				37D734DC1E4BB86C0074B516 /* IntNodeArray.hpp */,
+				37E76B4C1E523E66000018B6 /* Node.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -272,6 +274,7 @@
 				37D734C01E4BB66D0074B516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
