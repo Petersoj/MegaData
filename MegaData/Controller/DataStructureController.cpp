@@ -14,7 +14,7 @@
 using namespace std;
 
 DataStructureController :: DataStructureController(){
-    wordNode = Node<string>("Poopy mcpoopface");
+    wordNode = Node<string>();
     numberNode = Node<int>();
 }
 
