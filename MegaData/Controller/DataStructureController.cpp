@@ -14,14 +14,15 @@
 using namespace std;
 
 DataStructureController :: DataStructureController(){
-    
+    wordNode = Node<string>("Poopy mcpoopface");
+    numberNode = Node<int>();
 }
 
 void DataStructureController :: start(){
     cout << "Starting the project" << endl;
     cout << "Switching to the array testing" << endl;
     
-    testIntArray();
+    testNodes();
     
     cout << "Finished testing" << endl;
 }
@@ -34,4 +35,11 @@ void DataStructureController :: testIntArray(){
     for(int index = 0; index < 3; index++){
         cout << temp.getFromIndex(index) << " is at spot " << index << endl;
     }
+}
+
+void DataStructureController:: testNodes(){
+    cout << "The contentes of Node<stinrg>" << endl;
+    cout << wordNode.getNodeData() << endl;
+    cout << "Here is the Node<int>" << endl;
+    cout << numberNode.getNodeData() << endl;
 }
