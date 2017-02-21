@@ -11,6 +11,9 @@
 
 #include "Node.hpp"
 #include <assert.h>
+#include <iostream>
+
+using namespace std;
 
 template <class Type>
 class Array{
@@ -28,7 +31,7 @@ public:
     
     void setAtIndex(int index, Type value);
     Type getFromIndex(int index);
-    int getSize();
+    int getSize() const;
     Node<Type> * getFront() const;
 };
 
@@ -119,7 +122,7 @@ Array<Type> :: Array(const Array<Type> & toBeCopied){
     Node<Type> * updated = this->front;
     for(int index = 0; index < size; index++){
         updated->setNodeData(copyTemp->getNodeData());
-        update = updated->getNodePointer();
+        updated = updated->getNodePointer();
         copyTemp = copyTemp->getNodePointer();
     }
 }
