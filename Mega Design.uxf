@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>126</x>
-      <y>36</y>
+      <y>153</y>
       <w>342</w>
       <h>189</h>
     </coordinates>
@@ -21,16 +21,18 @@
 
 + IntNode() : init
 + IntNode(int value) : init
-+ IntNode(int nodeData, IntNode * nextNode) : init</panel_attributes>
++ IntNode(int nodeData, IntNode * nextNode) : init
+
+bg=magenta</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>522</x>
-      <y>171</y>
-      <w>270</w>
-      <h>126</h>
+      <x>126</x>
+      <y>396</y>
+      <w>306</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>IntNodeArray
 --
@@ -40,7 +42,61 @@
 + IntNodeArray(int size) : init
 + setAtIndex(int index, int value) : void
 + getFromIndex(int index) : int
-+ getSize() : int</panel_attributes>
++ getSize() : int
+
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>153</y>
+      <w>441</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+- nodeData : Type
+- nodePointer : Node&lt;Type&gt; *
+--
++ Node() : init
++ Node(Type value) : init
++ Node(Type data, Node&lt;Type&gt; * pointer) : init
+
++ getNodeData() : Type
++ getNodePointer() : Node&lt;Type&gt; *
++ setNodeData(Type value) : void
++ setNodePointer(Node&lt;Type&gt; * next) : void
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>378</y>
+      <w>414</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>Array&lt;Type&gt;
+--
+- size : int
+- font : Node&lt;Type&gt; *
+--
++ Array(): init
++ Array(int size) : init
+
++ ~Array&lt;Type&gt;() : destructor
++ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied) : copy init
+
++ getSize() const : int
++ getFront() const : Node&lt;Type&gt; *
++ setAtIndex(int index, Type value) : void
++ getFromIndex(int index) : Type
+
+bg=cyan</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
