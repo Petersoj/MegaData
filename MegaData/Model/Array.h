@@ -84,7 +84,7 @@ int Array<Type> :: getSize() const{
 }
 
 template <class Type>
-Array<Type> :: ~Arrya(){
+Array<Type> :: ~Array(){
     int count = size;
     Node<Type> * remove = front;
     while (front != nullptr) {
@@ -96,6 +96,25 @@ Array<Type> :: ~Arrya(){
         cout << "Moving the new front pointer" << endl;
         count--;
         cout << "Front is at: " << front << " count is: " << count << endl;
+    }
+}
+
+
+template <class Type>
+Array<Type> :: Array(const Array<Type> & toBeCopied){
+    this->size = toBeCopied.getSize();
+    
+    this->front = new Node<Type>();
+    for(int index = 1; index < size; index++){
+        Node<Type> * temp = new Node<Type>();
+        temp->setNodePointer(front);
+    }
+    Node<Type> * copyTemp = toBeCopied.getFront();
+    Node<Type> * updated = this->front;
+    for(int index = 0; index < size; index++){
+        updated->setNodeData(copyTemp->getNodeData());
+        update = updated->getNodePointer();
+        copyTemp = copyTemp->getNodePointer();
     }
 }
 
