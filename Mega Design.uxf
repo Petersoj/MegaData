@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>9</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>126</x>
-      <y>153</y>
-      <w>342</w>
-      <h>189</h>
+      <x>70</x>
+      <y>160</y>
+      <w>380</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>IntNode
 --
@@ -29,10 +29,10 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>126</x>
-      <y>396</y>
-      <w>306</w>
-      <h>180</h>
+      <x>70</x>
+      <y>430</y>
+      <w>340</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>IntNodeArray
 --
@@ -50,10 +50,10 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
-      <y>153</y>
-      <w>441</w>
-      <h>207</h>
+      <x>510</x>
+      <y>120</y>
+      <w>490</w>
+      <h>230</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
@@ -75,10 +75,10 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>882</x>
-      <y>378</y>
-      <w>414</w>
-      <h>216</h>
+      <x>540</x>
+      <y>390</y>
+      <w>460</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>Array&lt;Type&gt;
 --
@@ -97,6 +97,38 @@ bg=cyan</panel_attributes>
 + getFromIndex(int index) : Type
 
 bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1030</x>
+      <y>160</y>
+      <w>340</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>Model :: Array&lt;Type&gt;
+--
+- front : Node&lt;Type&gt; * 
+- size : int 
+--
+Constructors 
++ Array() : constructor 
++ Array(int size) : constructor 
+
+Advanced 
+
++ -Array&lt;Type&gt;() : destructor 
++ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied) : copy constructor 
+
+Methods 
+
++ getSize() const : int 
++ getFront() const : Node&lt;Type&gt; * 
++ setAtlndex(int index, Type value) : void 
++ getFromIndex(int index) : Type
+
+bg=green</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
