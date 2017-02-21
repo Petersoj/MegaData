@@ -29,6 +29,7 @@ public:
     void setAtIndex(int index, Type value);
     Type getFromIndex(int index);
     int getSize();
+    Node<Type> * getFront() const;
 };
 
 template <class Type>
@@ -81,6 +82,11 @@ Type Array<Type> :: getFromIndex(int index){
 template <class Type>
 int Array<Type> :: getSize() const{
     return size;
+}
+
+template <class Type>
+Node<Type> * Array<Type> :: getFront() const{
+    return front;
 }
 
 template <class Type>
