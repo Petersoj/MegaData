@@ -22,6 +22,10 @@ private:
 public:
     Array();
     Array(int size);
+    
+    ~Array<Type>();
+    Array<Type>(const Array<Type> & toBeCopied);
+    
     void setAtIndex(int index, Type value);
     Type getFromIndex(int index);
     int getSize();
