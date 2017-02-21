@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		375293631E54E43700E0C887 /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		3721844B1E5CC5A800B12D2C /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = MegaData/Model/Array.h; sourceTree = "<group>"; };
 		37D734B71E4BB66D0074B516 /* MegaData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaData; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D734D41E4BB8650074B516 /* DataStructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStructureController.cpp; path = MegaData/Controller/DataStructureController.cpp; sourceTree = "<group>"; };
 		37D734D51E4BB8650074B516 /* DataStructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataStructureController.hpp; path = MegaData/Controller/DataStructureController.hpp; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				37D734DB1E4BB86C0074B516 /* IntNodeArray.cpp */,
 				37D734DC1E4BB86C0074B516 /* IntNodeArray.hpp */,
 				37E76B4C1E523E66000018B6 /* Node.hpp */,
-				375293631E54E43700E0C887 /* Array.h */,
+				3721844B1E5CC5A800B12D2C /* Array.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
