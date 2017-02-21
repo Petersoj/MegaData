@@ -33,4 +33,5 @@ public:
     Node<Type> * getFront() const;
 };
 
+
 #endif /* Header_h */
