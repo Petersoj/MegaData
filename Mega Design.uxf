@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
+      <x>0</x>
       <y>160</y>
       <w>380</w>
       <h>210</h>
@@ -29,8 +29,8 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>430</y>
+      <x>20</x>
+      <y>390</y>
       <w>340</w>
       <h>200</h>
     </coordinates>
@@ -50,7 +50,7 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>510</x>
+      <x>440</x>
       <y>120</y>
       <w>490</w>
       <h>230</h>
@@ -75,7 +75,7 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
+      <x>470</x>
       <y>390</y>
       <w>460</w>
       <h>240</h>
@@ -102,31 +102,28 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1030</x>
+      <x>960</x>
       <y>160</y>
       <w>340</w>
       <h>340</h>
     </coordinates>
-    <panel_attributes>Model :: Array&lt;Type&gt;
+    <panel_attributes>Model :: List&lt;Type&gt;
 --
-- front : Node&lt;Type&gt; * 
-- size : int 
+- size : int
+- front : Node&lt;Type&gt; *
 --
-Constructors 
-+ Array() : constructor 
-+ Array(int size) : constructor 
++List&lt;Type&gt;() : constructor
++Lis&lt;Type&gt;(const List&lt;Type&gt; &amp; source): copy constructor
++~List&lt;Type&gt;() : destructor
 
-Advanced 
-
-+ -Array&lt;Type&gt;() : destructor 
-+ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied) : copy constructor 
-
-Methods 
-
-+ getSize() const : int 
-+ getFront() const : Node&lt;Type&gt; * 
-+ setAtlndex(int index, Type value) : void 
-+ getFromIndex(int index) : Type
++addAtIndex(int index, Type value) : void
++add(Type value): void
++remove(int index) : Type
++setAtIndex(int index, Type data) : Type
++getFromIndex(int index, Type data) : Type
++contains(Type data) : bool
++getSize() const : int
++getFront() const : Node&lt;Type&gt;; *
 
 bg=green</panel_attributes>
     <additional_attributes/>
