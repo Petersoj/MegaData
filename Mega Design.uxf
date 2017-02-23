@@ -4,34 +4,34 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>160</y>
-      <w>380</w>
-      <h>210</h>
+      <x>60</x>
+      <y>20</y>
+      <w>330</w>
+      <h>200</h>
     </coordinates>
-    <panel_attributes>IntNode
+    <panel_attributes>Node
 --
 - nodeData : int
-- nodePointer : IntNode *
+- nodePointer : IntNode*
 --
-+ getNodeData() : int
-+ getNodePointer() : IntNode*
++ getNodeData()
++ getNodePointer : IntNode *
 + setNodeData(int value) : void
 + setNodePointer(IntNode * next) : void
 
 + IntNode() : init
 + IntNode(int value) : init
-+ IntNode(int nodeData, IntNode * nextNode) : init
++ IntNode(int value, IntNode * nextNode) : init
 
-bg=magenta</panel_attributes>
+bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>390</y>
-      <w>340</w>
+      <x>600</x>
+      <y>20</y>
+      <w>290</w>
       <h>200</h>
     </coordinates>
     <panel_attributes>IntNodeArray
@@ -39,60 +39,34 @@ bg=magenta</panel_attributes>
 - size : int
 - front : IntNode *
 --
-+ IntNodeArray(int size) : init
++ IntNodeArray(int size) : constructor
 + setAtIndex(int index, int value) : void
-+ getFromIndex(int index) : int
++ getFromindex(int index) : int
 + getSize() : int
 
-bg=magenta</panel_attributes>
+bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>120</y>
+      <x>530</x>
+      <y>280</y>
       <w>490</w>
-      <h>230</h>
-    </coordinates>
-    <panel_attributes>Node&lt;Type&gt;
---
-- nodeData : Type
-- nodePointer : Node&lt;Type&gt; *
---
-+ Node() : init
-+ Node(Type value) : init
-+ Node(Type data, Node&lt;Type&gt; * pointer) : init
-
-+ getNodeData() : Type
-+ getNodePointer() : Node&lt;Type&gt; *
-+ setNodeData(Type value) : void
-+ setNodePointer(Node&lt;Type&gt; * next) : void
-
-bg=cyan</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>470</x>
-      <y>390</y>
-      <w>460</w>
-      <h>240</h>
+      <h>210</h>
     </coordinates>
     <panel_attributes>Array&lt;Type&gt;
 --
+- front : Node&lt;Type&gt; *
 - size : int
-- font : Node&lt;Type&gt; *
 --
-+ Array(): init
-+ Array(int size) : init
++ Array() : constructor
++ Array(int size) : constructor
 
 + ~Array&lt;Type&gt;() : destructor
-+ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied) : copy init
++ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied) : copy constructor
 
-+ getSize() const : int
-+ getFront() const : Node&lt;Type&gt; *
++ getSize() : int
 + setAtIndex(int index, Type value) : void
 + getFromIndex(int index) : Type
 
@@ -100,32 +74,85 @@ bg=cyan</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>340</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>960</x>
-      <y>160</y>
-      <w>340</w>
-      <h>340</h>
+      <x>30</x>
+      <y>310</y>
+      <w>390</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+- nodeData : Type
+- nodePointer : Node&lt;Type&gt; *
+--
++ Node() : constructor
++ Node(Type value) : constructor
++ Node(Type data, Node&lt;Type&gt; * pointer) : constructor
+
++ getNodeData() : Type
++ getNodePointer() : Node&lt;Type&gt; *
++ setNodeData() : Void
++ setNodePointer(Node&lt;Type&gt; * next) : void
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>120</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;220.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>570</y>
+      <w>420</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>Model :: List&lt;Type&gt;
 --
 - size : int
 - front : Node&lt;Type&gt; *
+- end : Node&lt;Type&gt; *
 --
 +List&lt;Type&gt;() : constructor
-+Lis&lt;Type&gt;(const List&lt;Type&gt; &amp; source): copy constructor
++List&lt;Type&gt;(constList&lt;Type&gt;&amp;source): copy constructor
 +~List&lt;Type&gt;() : destructor
 
 +addAtIndex(int index, Type value) : void
-+add(Type value): void
++addFront(Type value): void
++addEnd(Type value): void
 +remove(int index) : Type
 +setAtIndex(int index, Type data) : Type
 +getFromIndex(int index, Type data) : Type
 +contains(Type data) : bool
-+getSize() const : int
-+getFront() const : Node&lt;Type&gt;; *
++getSize(const) : int
++getFront() const : Node&lt;Type&gt; *
++getEnd() const : Node&lt;Type&gt; *
 
-bg=green</panel_attributes>
+bg=magenta
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
