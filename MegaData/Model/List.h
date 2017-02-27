@@ -35,6 +35,8 @@ public:
     Type remove(int index);
     Type contains(Type data);
     int getSize() const;
+    Node<Type> * getFront() const;
+    Node<Type> * getEnd() const;
     Node<Type> * getFrontIndex() const;
     Type getFrontIndex();
 };
@@ -46,6 +48,32 @@ List<Type> :: List()
     this-> front = nullptr;
     this-> end = nullptr;
 }
+
+template <class Type>
+List<Type> :: ~List<Type>() {
+    Node<Type> * destruction = front;
+    while(front != nullptr){
+        front = front->getNodePointer();
+        delete destruction;
+        destruction = front;
+    }
+}
+
+template <class Type>
+int List<Type> :: getSize() const {
+    return this->size;
+}
+
+template <class Type>
+Node<Type> * List<Type> :: getFront() const {
+    return this->front;
+}
+
+template <class Type>
+Node<Type> * List<Type> :: getEnd() const {
+    return this->end;
+}
+
 
 template <class Type>
 void List<Type> :: addFront(Type value)
@@ -83,6 +111,23 @@ void List<Type> :: addEnd(Type data)
         this->end = added;
     }
     size++;
+}
+
+template <class Type>
+Type List<Type> :: setAtIndex(int index, Type data){
+    assert(index >= 0 && index > size);
+    Type removeData;
+    
+    Node<Type> * current = front;
+    
+    for(int spot = 0; spot < index; spot++){
+        current = current->getNodePointer();
+    }
+    
+    removeData = current->getNodePointer();
+    current->setNodePointer(data);
+    
+    return removeData;
 }
 
 template <class Type>
