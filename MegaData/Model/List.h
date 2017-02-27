@@ -11,6 +11,7 @@
 
 #include "assert.h"
 #include "Node.hpp"
+#include "BiDirectionalNode.h"
 
 template <class Type>
 class List
