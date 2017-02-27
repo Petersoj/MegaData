@@ -10,6 +10,7 @@
 #include <iostream>
 #include "../Model/IntNode.hpp"
 #include "../Model/IntNodeArray.hpp"
+#include "List.h"
 
 using namespace std;
 
@@ -19,12 +20,7 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    cout << "Starting the project" << endl;
-    cout << "Switching to the array testing" << endl;
-    
-    testAdvancedFeatures();
-    
-    cout << "Finished testing" << endl;
+    testList();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
@@ -51,6 +47,25 @@ void DataStructureController :: testIntArray(){
     for(int index = 0; index < 3; index++){
         cout << temp.getFromIndex(index) << " is at spot " << index << endl;
     }
+}
+
+void DataStructureController:: testList(){
+    List<string> taco;
+    taco.addFront("Welcome to disneyland");
+    taco.addEnd("The end is nigh.");
+    taco.addAtIndex(1, "This is the 2nd (3rd) pos");
+    taco.addEnd("Conman");
+    
+    cout << "Contains \"Conman\"? " << taco.contains("Conman") << endl << endl;
+    
+    for(int index = 0; index < taco.getSize(); index++){
+        cout << taco.getFromIndex(index) << " is at index: " << index << endl;
+    }
+    
+    taco.remove(3);
+    
+    cout << "Size: " << taco.getSize() << endl << endl;
+    cout << "Contains \"Conman\"? " << taco.contains("Conman") << endl << endl;
 }
 
 void DataStructureController:: testNodes(){

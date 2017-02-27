@@ -12,7 +12,7 @@
 #include "Node.hpp"
 #include <iostream>
 #include <assert.h>
-#include "List.h"
+
 using namespace std;
 
 template <class Type>

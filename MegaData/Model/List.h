@@ -124,8 +124,8 @@ Type List<Type> :: setAtIndex(int index, Type data){
         current = current->getNodePointer();
     }
     
-    removeData = current->getNodePointer();
-    current->setNodePointer(data);
+    removeData = current->getNodeData();
+    current->setNodeData(data);
     
     return removeData;
 }
@@ -178,20 +178,17 @@ Type List<Type> :: getFromIndex(int index)
 template <class Type>
 bool List<Type> :: contains(Type findMe)
 {
-    assert(index >= 0 && index<size);
     bool isInList = false;
-    
     Node<Type> * current = front;
+    
     for(int index = 0; index < size; index++)
     {
-        if(current->getNodeData == findMe)
+        if(current->getNodeData() == findMe)
         {
             isInList = true;
             return isInList;
         }
     }
-    
-    
     return isInList;
 }
 
