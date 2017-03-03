@@ -272,10 +272,26 @@ bg=red</panel_attributes>
     <coordinates>
       <x>600</x>
       <y>1320</y>
-      <w>230</w>
-      <h>160</h>
+      <w>240</w>
+      <h>230</h>
     </coordinates>
-    <panel_attributes>Queue</panel_attributes>
+    <panel_attributes>Model :: Queue&lt;Type&gt;
+--
+-front: BiDirectionalNode&lt;Type. *
+-end: BiDirectionalNode&lt;Type&gt; *
+-size : int
+--
++ Queue() : constructor
++ ~Queue() : destructor
+
++ add(Type data) : void
++ remove(int index) : Type
+
++ enqueue(Type data) : void
++ dequeue(): Type
++ peek() : Type
+
+bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -294,10 +310,21 @@ bg=red</panel_attributes>
     <coordinates>
       <x>1140</x>
       <y>1320</y>
-      <w>230</w>
+      <w>330</w>
       <h>160</h>
     </coordinates>
-    <panel_attributes>CircularlyLinkedlist</panel_attributes>
+    <panel_attributes>Moddel :: CircularlyLinkedList&lt;Type&gt;
+--
+-front: BiDirectionalNode&lt;Type. *
+-end: BiDirectionalNode&lt;Type&gt; *
+-size : int
+--
++add(Type) : void
++ remove(int index) : Type
+
++addAtIndex(int index, Type data) : void
+
+bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -305,13 +332,26 @@ bg=red</panel_attributes>
     <coordinates>
       <x>870</x>
       <y>1380</y>
-      <w>230</w>
-      <h>160</h>
+      <w>260</w>
+      <h>170</h>
     </coordinates>
-    <panel_attributes>Stack
+    <panel_attributes>Model :: Stack
 --
+-front: BiDirectionalNode&lt;Type. *
+-end: BiDirectionalNode&lt;Type&gt; *
+-size : int
+--
++ Stack() : constructor
++ ~Stack() : destructor
 
---</panel_attributes>
++ add(Type data) : void
++ remove(int index) : Type
+
++ push(Type data) : void
++ pop(): Type
++ peek() : Type
+
+bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

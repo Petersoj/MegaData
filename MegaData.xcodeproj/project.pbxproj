@@ -30,6 +30,7 @@
 		3721844C1E5CD9AB00B12D2C /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = List.h; path = MegaData/Model/List.h; sourceTree = "<group>"; };
 		375087791E67687D0027CA6D /* CircularList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CircularList.h; path = MegaData/Model/CircularList.h; sourceTree = "<group>"; };
 		3772D4021E675EF900E7546C /* DoublyLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DoublyLinkedList.h; path = MegaData/Model/DoublyLinkedList.h; sourceTree = "<group>"; };
+		37C45AE41E6A09E8004D50EC /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = MegaData/Model/Queue.h; sourceTree = "<group>"; };
 		37C63AF21E64C70F00D64F83 /* BiDirectionalNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BiDirectionalNode.h; path = MegaData/Model/BiDirectionalNode.h; sourceTree = "<group>"; };
 		37D734B71E4BB66D0074B516 /* MegaData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaData; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D734D41E4BB8650074B516 /* DataStructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStructureController.cpp; path = MegaData/Controller/DataStructureController.cpp; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 				37C63AF21E64C70F00D64F83 /* BiDirectionalNode.h */,
 				3772D4021E675EF900E7546C /* DoublyLinkedList.h */,
 				375087791E67687D0027CA6D /* CircularList.h */,
+				37C45AE41E6A09E8004D50EC /* Queue.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
