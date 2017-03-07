@@ -28,10 +28,10 @@ public:
     // Methods
     
     int getNodeData();
-    IntNode * getNodePointer();
+    IntNode * getNextPointer();
     
     void setNodeData(int value);
-    void setNodePointer(IntNode* nextNode);
+    void setNextPointer(IntNode* nextNode);
 };
 
 
