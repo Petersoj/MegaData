@@ -9,7 +9,7 @@
 #ifndef BiDirectionalNode_h
 #define BiDirectionalNode_h
 
-#include "DoubleLinkedList.h"
+#include "DoublyLinkedList.h"
 
 template <class Type>
 class BiDirectionalNode : public Node<Type> {

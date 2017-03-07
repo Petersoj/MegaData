@@ -9,21 +9,19 @@
 #ifndef DoublyLinkedList_h
 #define DoublyLinkedList_h
 
-#include "BiDirectionalNode.hpp"
+#include "BiDirectionalNode.h"
 #include "CircularList.h"
-
-#include "BiDirectionalNode.hpp"
 
 template <class Type>
 class DoublyLinkedList
 {
 private:
     BiDirectionalNode<Type> * front;
-    BiDirectionalNode<Type> * endl;
+    BiDirectionalNode<Type> * end;
     int size;
 public:
     DoublyLinkedList();
-    getSize() const;
+    int getSize() const;
     
     virtual ~DoublyLinkedList() = 0;
     BiDirectionalNode<Type> * getFront() const;
@@ -41,18 +39,18 @@ DoublyLinkedList<Type> :: DoublyLinkedList() {
 }
 
 template <class Type>
-int CoubleLinkedList<Type> :: getSize() {
+int DoublyLinkedList<Type> :: getSize() const {
     return size;
 }
 
 template <class Type>
-BiDirectionaNode<Type> * DoublyLinkedList<Type :: getFront() {
+BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getFront() const {
     return front;
 }
 
 
 template <class Type>
-BiDirectionaNode<Type> * DoublyLinkedList<Type :: getEnd() {
+BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getEnd() const {
     return end;
 }
 

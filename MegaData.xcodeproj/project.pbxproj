@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3702D2BC1E6F4B3700E375E0 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Stack.h; path = MegaData/Model/Stack.h; sourceTree = "<group>"; };
 		3721844B1E5CC5A800B12D2C /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = MegaData/Model/Array.h; sourceTree = "<group>"; };
 		3721844C1E5CD9AB00B12D2C /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = List.h; path = MegaData/Model/List.h; sourceTree = "<group>"; };
 		375087791E67687D0027CA6D /* CircularList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CircularList.h; path = MegaData/Model/CircularList.h; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 				3772D4021E675EF900E7546C /* DoublyLinkedList.h */,
 				375087791E67687D0027CA6D /* CircularList.h */,
 				37C45AE41E6A09E8004D50EC /* Queue.h */,
+				3702D2BC1E6F4B3700E375E0 /* Stack.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";

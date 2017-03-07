@@ -12,7 +12,7 @@
 #include "DoublyLinkedList.h"
 
 template <class Type>
-class CircularList : public DoublyLinkedList<Type> {
+class CircularList<Type> : public DoublyLinkedList<Type> {
     
 private:
     // No need to redefine the private data members!
