@@ -11,6 +11,7 @@
 		37D734D81E4BB8650074B516 /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D734D61E4BB8650074B516 /* NodeRunner.cpp */; };
 		37ED04971E71DCBC00398260 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37ED048F1E71DCBC00398260 /* IntNode.cpp */; };
 		37ED04981E71DCBC00398260 /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37ED04911E71DCBC00398260 /* IntNodeArray.cpp */; };
+		37ED049B1E71E5AE00398260 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37ED04991E71E5AE00398260 /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		37ED04941E71DCBC00398260 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = MegaData/Model/Node.hpp; sourceTree = "<group>"; };
 		37ED04951E71DCBC00398260 /* Queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Queue.hpp; path = MegaData/Model/Queue.hpp; sourceTree = "<group>"; };
 		37ED04961E71DCBC00398260 /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = MegaData/Model/Stack.hpp; sourceTree = "<group>"; };
+		37ED04991E71E5AE00398260 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = MegaData/Model/Timer.cpp; sourceTree = "<group>"; };
+		37ED049A1E71E5AE00398260 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = MegaData/Model/Timer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 		37D734C11E4BB68D0074B516 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37ED04991E71E5AE00398260 /* Timer.cpp */,
+				37ED049A1E71E5AE00398260 /* Timer.h */,
 				37ED048A1E71DCBC00398260 /* Array.hpp */,
 				37ED048B1E71DCBC00398260 /* BiDirectionalNode.hpp */,
 				37ED048C1E71DCBC00398260 /* CircularList.hpp */,
@@ -163,6 +168,7 @@
 				37ED04971E71DCBC00398260 /* IntNode.cpp in Sources */,
 				37ED04981E71DCBC00398260 /* IntNodeArray.cpp in Sources */,
 				37D734D71E4BB8650074B516 /* DataStructureController.cpp in Sources */,
+				37ED049B1E71E5AE00398260 /* Timer.cpp in Sources */,
 				37D734D81E4BB8650074B516 /* NodeRunner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

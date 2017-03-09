@@ -10,11 +10,8 @@
 #define DoubleList_h
 
 template <class Type>
-class DoubleList : public DoublyLinkedList<Type>
-{
+class DoubleList : public DoublyLinkedList<Type> {
 private:
-    
-    
 public:
     DoubleList();
     ~DoubleList();
@@ -27,60 +24,46 @@ public:
 };
 
 template <class Type>
-void DoubleList<Type> :: add(Type value)
-{
-    BiDirectionalNode<Type> * addedNode = new BiDirectionalNode<Type>(value);
-    if(this->getSize() == 0)
-    {
+void DoubleList<Type>::add(Type value) {
+    BiDirectionalNode<Type> *addedNode = new BiDirectionalNode<Type>(value);
+    if (this->getSize() == 0) {
         this->setFront(addedNode);
-    }
-    else
-    {
+    } else {
         this->getEnd()->setNextPointer(addedNode);
-        addedNode -> setPreviosPointer(this->getEnd());
+        addedNode->setPreviosPointer(this->getEnd());
     }
     this->setEnd(addedNode);
-    this->setSize(this->getSize()+1);
+    this->setSize(this->getSize() + 1);
 }
 
-
-
-
 template <class Type>
-DoubleList<Type> :: ~DoubleList()
-{
-    BiDirectionalNode<Type> * remove = this->getFront();
-    while(this->getFront() != nullptr)
-    {
+DoubleList<Type>::~DoubleList() {
+    BiDirectionalNode<Type> *remove = this->getFront();
+    while (this->getFront() != nullptr) {
         this->setFront(this->getFront()->getNextPointer());
         delete remove;
-        remove= this->getFront();
+        remove = this->getFront();
     }
 }
 
-
 template <class Type>
-Type DoubleList<Type> :: remove(int index)
-{
+Type DoubleList<Type>::remove(int index) {
     Type derp;
-    BiDirectionalNode<Type> * nodeToTakeOut = this->getFront();
-    for(int spot = 0; spot < index; spot++)
-    {
+    BiDirectionalNode<Type> *nodeToTakeOut = this->getFront();
+    for (int spot = 0; spot < index; spot++) {
         nodeToTakeOut = nodeToTakeOut->getNextPointer();
     }
     derp = nodeToTakeOut->getNNextPointer();
     
-    BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
-    BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
+    BiDirectionalNode<Type> *prev = nodeToTakeOut->getPreviousPointer();
+    BiDirectionalNode<Type> *next = nodeToTakeOut->getNextPointer();
     
     prev->setNextPointer(next);
     next->setPrevoiusPointer(prev);
     
     delete nodeToTakeOut;
     
-    this->setSize(this->gettSize()-1);
+    this->setSize(this->gettSize() - 1);
     return derp;
-    
-    
 }
 #endif /* DoubleList_h */

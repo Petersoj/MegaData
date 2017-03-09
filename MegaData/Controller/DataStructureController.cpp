@@ -10,8 +10,8 @@
 #include <iostream>
 #include "../Model/IntNode.hpp"
 #include "../Model/IntNodeArray.hpp"
-#include "List.h"
-#include "Queue.h"
+#include "List.hpp"
+#include "Queue.hpp"
 
 using namespace std;
 
