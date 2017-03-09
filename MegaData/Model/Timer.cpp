@@ -1,36 +1,43 @@
-/*
- * Timer.cpp
- *
- *  Created on: Jan 31, 2017
- *      Author: jpet4781
- */
+//
+//  Timer.cpp
+//  FirstCPlusPlus
+//
+//  Created by Smith, Arick on 1/31/17.
+//  Copyright © 2017 CTEC. All rights reserved.
+//
 
+#include "Timer.hpp"
 #include <iostream>
-#include "Timer.h"
 
 using namespace std;
 
-Timer::Timer() {
-	executionTime = 0;
+Timer :: Timer()
+{
+    executionTime = 0;
 }
 
-void Timer :: resetTimer(){
-	executionTime = 0;
+void Timer :: resetTimer()
+{
+    executionTime = 0;
 }
 
-void Timer :: startTimer(){
-	executionTime = clock();
+void Timer :: startTimer()
+{
+    executionTime = clock();
 }
 
-void Timer :: finishTimer(){
-	executionTime = clock() - executionTime;
+void Timer :: stopTimer()
+{
+    executionTime = clock() - executionTime;
 }
 
-long Timer :: getExecutionTimeInMicroseconds(){
-	return executionTime;
+long Timer :: getExecutionTimeInMicroseconds()
+{
+    return executionTime;
+}
+void Timer :: displayTimerInformation()
+{
+    cout << "It took this long to execute: " << executionTime << endl;
+    cout << "That is this man seconds: " << executionTime/CLOCKS_PER_SEC << endl;
 }
 
-void Timer :: displayTimerInformation(){
-	cout << "It took this long to execute: " << executionTime << endl;
-	cout << "That is this many seconds: " << executionTime/CLOCKS_PER_SEC << endl;
-}

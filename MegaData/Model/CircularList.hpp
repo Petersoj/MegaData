@@ -2,14 +2,14 @@
 //  CircularList.hpp
 //  ArrayProject
 //
-//  Created by Peterson, Jacob on 3/1/17.
-//  Copyright © 2017 Peterson, Jacob. All rights reserved.
+//  Created by Smith, Arick on 3/1/17.
+//  Copyright © 2017 Smith, Arick. All rights reserved.
 //
 
 #ifndef CircularList_h
 #define CircularList_h
 
-#include "DoublyLinckedList.hpp"
+#include "DoublyLinkedList.hpp"
 
 template <class Type>
 class CircularList : public DoublyLinkedList<Type>

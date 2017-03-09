@@ -2,8 +2,8 @@
 //  Array.hpp
 //  ArrayProject
 //
-//  Created by Peterson, Jacob on 2/15/17.
-//  Copyright © 2017 Peterson, Jacob. All rights reserved.
+//  Created by Smith, Arick on 2/15/17.
+//  Copyright © 2017 Smith, Arick. All rights reserved.
 //
 
 #ifndef Array_h
@@ -140,7 +140,7 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
     }
     
     
-    
+   
     
 }
 template <class Type>

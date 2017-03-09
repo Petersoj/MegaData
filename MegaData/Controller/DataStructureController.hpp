@@ -10,22 +10,33 @@
 
 #include "../Model/Node.hpp"
 #include "../Model/Array.hpp"
+#include "../Model/CircularList.hpp"
+#include "../Model/Queue.hpp"
+#include "../Model/Stack.hpp"
+#include "../Model/DoubleList.hpp"
+#include "../Model/DoublyLinkedList.hpp"
+#include "../Model/BiDirectionalNode.hpp"
+#include "../Model/Timer.hpp"
+
 #include <string>
 
 using namespace std;
 
-class DataStructureController {
-    
+class DataStructureController
+{
 private:
     void testIntArray();
     Node<int> numberNode;
     Node<string> wordNode;
-    void testNodes();
     void testAdvancedFeatures();
     void testList();
+    void testListTiming();
+    void testNodes();
+    
 public:
     DataStructureController();
     void start();
+    
 };
 
 #endif /*DataStructureController*/
