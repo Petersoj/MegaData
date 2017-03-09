@@ -21,7 +21,7 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    testList();
+    testListTiming();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
