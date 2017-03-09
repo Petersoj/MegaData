@@ -1,38 +1,38 @@
 //
 //  IntNode.hpp
-//  MegaDatas
+//  ArrayProject
 //
-//  Created by Peterson, Jacob on 2/8/17.
+//  Created by Peterson, Jacob on 2/6/17.
 //  Copyright © 2017 Peterson, Jacob. All rights reserved.
 //
 
 #ifndef IntNode_hpp
 #define IntNode_hpp
 
-#include <stdio.h>
-
-class IntNode {
-    
+class IntNode
+{
 private:
     int nodeData;
-    IntNode * nodePointer;
+    IntNode * nextPointer;
+    
 public:
+    //init
     IntNode();
     IntNode(int value);
     /*
-     * Creates an IntNode with a specified value and nextPointer
-     *
+     Creates an IntNode with a specified value and next node pointer
      */
     IntNode(int value, IntNode * nextNode);
-    
-    // Methods
-    
+   
+    //Methods
     int getNodeData();
-    IntNode * getNextPointer();
+    IntNode * getNodePointer();
     
     void setNodeData(int value);
-    void setNextPointer(IntNode* nextNode);
+    void setNodePointer(IntNode * next);
+    
+    
+    
 };
-
 
 #endif /* IntNode_hpp */

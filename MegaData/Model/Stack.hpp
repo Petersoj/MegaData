@@ -1,8 +1,8 @@
 //
-//  Stack.h
-//  MegaData
+//  Stack.hpp
+//  ArrayProject
 //
-//  Created by Peterson, Jacob on 3/7/17.
+//  Created by Peterson, Jacob on 3/3/17.
 //  Copyright © 2017 Peterson, Jacob. All rights reserved.
 //
 
@@ -24,7 +24,7 @@ public:
     Type peek();
     void push(Type data);
     
-}
+};
 
 template <class Type>
 Stack<Type> :: Stack() : DoublyLinkedList<Type>()
@@ -49,7 +49,7 @@ Stack<Type>:: ~Stack()
 }
 
 template <class Type>
-Stack<Type>:: push(Type addedThing)
+void Stack<Type> :: push(Type addedThing)
 {
     BiDirectionalNode<Type> * addToStack = new BiDirectionalNode<Type>(addedThing);
     if(this->setSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
@@ -66,13 +66,13 @@ Stack<Type>:: push(Type addedThing)
 }
 
 template <class Type>
-Stack<Type> :: pop()
+Type Stack<Type> :: pop()
 {
-    assert(this->getSize() > 0)
+    assert(this->getSize() > 0);
     Type removed = this->getEnd()->getNodeData();
     
-    BiDirectionalNode<Type> * updata = this->getEnd();
-    updata = update->getPreviousPointer();
+    BiDirectionalNode<Type> * update = this->getEnd();
+    update = update->getPreviousPointer();
     
     if(update != nullptr)
     {
@@ -86,10 +86,11 @@ Stack<Type> :: pop()
 }
 
 template <class Type>
-Stack<Type> ::peek()
+Type Stack<Type> ::peek()
 {
-    assert(this->getSize() > 0)
+    assert(this->getSize() > 0);
     return this->getEnd()->getNodeData();
 }
+
 
 #endif /* Stack_h */

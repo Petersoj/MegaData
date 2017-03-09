@@ -1,35 +1,40 @@
 //
 //  IntNodeArray.cpp
-//  MegaDatas
+//  ArrayProject
 //
 //  Created by Peterson, Jacob on 2/8/17.
 //  Copyright © 2017 Peterson, Jacob. All rights reserved.
 //
 
 #include "IntNodeArray.hpp"
-#include "IntNode.hpp"
 #include <assert.h>
 
-IntNodeArray :: IntNodeArray(int size){
+IntNodeArray :: IntNodeArray(int size)
+{
     assert(size > 0);
     
-    this->front = new IntNode();
-    this->size = size;
+    this-> size = size;
+    this-> front = new IntNode();
     
-    for(int index = 1; index < size; index++){
+    for(int index = 0; index < size; index++)
+    {
         IntNode * current = new IntNode();
-        current->setNextPointer(front);
+        current->setNodePointer(front);
         front = current;
     }
+    
 }
 
-int IntNodeArray :: getFromIndex(int index){
+int IntNodeArray :: getFromIndex(int index)
+{
     assert(index >= 0 && index < size);
     int value = 0;
     
     IntNode * current = front;
-    for(int posistion = 0; posistion < index; posistion++){
-        current = current->getNextPointer();
+    
+    for(int position = 0; position < index; position++)
+    {
+        current = current -> getNodePointer();
     }
     
     value = current->getNodeData();
@@ -37,16 +42,16 @@ int IntNodeArray :: getFromIndex(int index){
     return value;
 }
 
-int IntNodeArray:: getSize(){
-    return size;
+void IntNodeArray:: setAtIndex(int index, int value)
+{
+    assert(index >= 0 && index < size);
+    IntNode * current = front;
+    
+    for(int spot = 0; spot < index; spot++)
+    {
+        current = current -> getNodePointer();
+    }
+    
+    current->setNodeData(value);
 }
 
-//void setAtIndex(int index, int value){
-//    assert(index >= 0 && index < size);
-//    
-//    IntNode * current = front;
-//    
-//    for(int spot = 0; spot < index; spot++){
-//        current = current
-//    }
-//}

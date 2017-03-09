@@ -1,6 +1,6 @@
 //
-//  CircularList.h
-//  MegaData
+//  CircularList.hpp
+//  ArrayProject
 //
 //  Created by Peterson, Jacob on 3/1/17.
 //  Copyright © 2017 Peterson, Jacob. All rights reserved.
@@ -9,31 +9,34 @@
 #ifndef CircularList_h
 #define CircularList_h
 
-#include "DoublyLinkedList.h"
+#include "DoublyLinckedList.hpp"
 
 template <class Type>
-class CircularList<Type> : public DoublyLinkedList<Type> {
-    
+class CircularList : public DoublyLinkedList<Type>
+{
 private:
-    // No need to redefine the private data members!
+    //no need to redefine private data members.
 public:
     CircularList();
     ~CircularList();
     
     void add(Type data);
     Type remove(int index);
+    //other methods.
+    
     
 };
 
 template <class Type>
-CircularList<Type> :: CircularList() : DoublyLinkedList() {
-    // deal with circle list stuff only
+CircularList<Type> :: CircularList() : DoublyLinkedList<Type>()
+{
+    //deal with circle list stuff only here.
     
 }
 
 template <class Type>
-void CircularList<Type> :: add(Type data) {
+void CircularList<Type> :: add(Type data)
+{
     
 }
-
 #endif /* CircularList_h */

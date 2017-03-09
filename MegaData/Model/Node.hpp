@@ -1,6 +1,6 @@
 //
-//  Node.h
-//  MegaData
+//  Node.hpp
+//  ArrayProject
 //
 //  Created by Peterson, Jacob on 2/13/17.
 //  Copyright © 2017 Peterson, Jacob. All rights reserved.
@@ -13,61 +13,83 @@ template <class Type>
 class Node
 {
 private:
+    
     Type nodeData;
-    Node<Type> * nodePointer;
+    Node<Type> * nextPointer;
+    
+    
+    
 public:
+    
     Node();
     Node(Type nodeData);
-    Node(Type data, Node<Type> * next);
+    Node(Type data, Node<Type> * pointer);
     
-    void setNodeData(Type data);
-    void setNextPointer(Node<Type>* pointer);
     Type getNodeData();
-    Node<Type> * getNextPointer();
+    Node<Type> * getNodePointer();
+    void setNodeData(Type data);
+    void setNodePointer(Node<Type>* pointer);
+
+    
 };
 
 /*
- Implementation section
- */
+Implamentation section
+*/
 
-template <class Type>
-Node<Type> :: Node(){
-    // Explicitly DO NOT instantiate the nodeData data member
-    this->nodePointer = nullptr;
+template<class Type>
+Node<Type> :: Node()
+{
+    //Explicitly DO NOT instanciate the nodeData data member
+    this->nextPointer = nullptr;
+}
+template<class Type>
+Node<Type> ::Node(Type data)
+{
+    this->nodeData = data;
+    this->nextPointer = nullptr;
 }
 
-
-template <class Type>
-Node<Type> :: Node(Type nodeData){
+template<class Type>
+Node<Type> :: Node(Type nodeData, Node<Type> * nextPointer)
+{
     this->nodeData = nodeData;
-    this->nodePointer = nullptr;
+    this->nextPointer = nextPointer;
 }
 
-template <class Type>
-Node<Type> :: Node(Type data, Node<Type> * next){
-    this->nodeData = data;
-    this->nodePointer = next;
-}
-
-template <class Type>
-void Node<Type> :: setNodeData(Type data){
+template<class Type>
+void Node<Type> :: setNodeData(Type data)
+{
     this->nodeData = data;
 }
 
-template <class Type>
-void Node<Type> :: setNextPointer(Node<Type>* pointer){
-    this->nodePointer = pointer;
+template<class Type>
+void Node<Type> :: setNodePointer(Node * nextPointer)
+{
+    this->nextPointer = nextPointer;
 }
 
-template <class Type>
-Type Node<Type> :: getNodeData(){
+template<class Type>
+Type Node<Type> :: getNodeData()
+{
     return this->nodeData;
 }
 
-template <class Type>
-Node<Type>* Node<Type> :: getNextPointer(){
-    return this->nodePointer;
+template<class Type>
+Node<Type> * Node<Type> :: getNodePointer()
+{
+    return this -> nextPointer;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 #endif /* Node_hpp */

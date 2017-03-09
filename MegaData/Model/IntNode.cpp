@@ -1,39 +1,47 @@
 //
 //  IntNode.cpp
-//  MegaDatas
+//  ArrayProject
 //
-//  Created by Peterson, Jacob on 2/8/17.
+//  Created by Peterson, Jacob on 2/6/17.
 //  Copyright © 2017 Peterson, Jacob. All rights reserved.
 //
 
 #include "IntNode.hpp"
 
-IntNode :: IntNode(){
-    this->nodePointer = 0;
+IntNode :: IntNode()
+{
+    this->nextPointer = nullptr;
     this->nodeData = -9999;
 }
 
-IntNode :: IntNode(int value){
-    this->nodePointer = 0;
+IntNode :: IntNode(int value)
+{
+    this->nextPointer = nullptr;
     this->nodeData = value;
-}
-IntNode :: IntNode(int value, IntNode * nodePointer){
-    this->nodeData = value;
-    this->nodePointer = nodePointer;
 }
 
-void IntNode :: setNodeData(int newValue){
+IntNode :: IntNode(int value, IntNode * nextPointer)
+{
+    this->nextPointer = nextPointer;
+    this->nodeData = value;
+}
+
+void IntNode :: setNodeData(int newValue)
+{
     nodeData = newValue;
 }
 
-void IntNode :: setNextPointer(IntNode * nodePointer){
-    this->nodePointer = nodePointer;
+void IntNode :: setNodePointer(IntNode * nextPointer)
+{
+    this->nextPointer = nextPointer;
 }
 
-int IntNode :: getNodeData(){
+int IntNode :: getNodeData()
+{
     return nodeData;
 }
 
-IntNode * IntNode :: getNextPointer(){
-    return nodePointer;
+IntNode * IntNode :: getNodePointer()
+{
+    return this->nextPointer;
 }

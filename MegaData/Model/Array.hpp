@@ -1,6 +1,6 @@
 //
-//  Array.h
-//  MegaData
+//  Array.hpp
+//  ArrayProject
 //
 //  Created by Peterson, Jacob on 2/15/17.
 //  Copyright © 2017 Peterson, Jacob. All rights reserved.
@@ -12,6 +12,7 @@
 #include "Node.hpp"
 #include <iostream>
 #include <assert.h>
+#include "List.hpp"
 
 using namespace std;
 
@@ -54,7 +55,7 @@ Array<Type> :: Array(int size)
     for (int index= 1; index < size; index++)
     {
         Node<Type> * current  = new Node<Type>();
-        current -> setNextPointer(front);
+        current -> setNodePointer(front);
         front = current;
     }
 }
@@ -66,7 +67,7 @@ void Array<Type> :: setAtIndex(int index, Type value)
     Node<Type> * current = front;
     for(int spot = 0; spot < index; spot++)
     {
-        current = current -> getNextPointer();
+        current = current -> getNodePointer();
     }
     current-> setNodeData(value);
 }
@@ -80,7 +81,7 @@ Type Array<Type> :: getFromIndex(int index)
     Node<Type> * current = front;
     for(int position = 0; position < index; position++)
     {
-        current = current -> getNextPointer();
+        current = current -> getNodePointer();
     }
     value = current->getNodeData();
     return value;
@@ -100,7 +101,7 @@ Array<Type> :: ~Array()
     while(front != nullptr)
     {
         //Move to next node in array
-        front = front->getNextPointer();
+        front = front->getNodePointer();
         cout<< "Moving to the next node. At: " << count << endl;
         //Delete the front pointer
         delete remove;
@@ -123,7 +124,7 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
     for(int index = 1; index < size; index++)
     {
         Node<Type> * temp = new Node<Type>();
-        temp->setNextPointer(front);
+        temp->setNodePointer(front);
         front = temp;
     }
     
@@ -134,8 +135,8 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
     for(int index = 0; index < size; index++)
     {
         updated -> setNodeData(copyTemp->getNodeData());
-        updated = updated -> getNextPointer();
-        copyTemp = copyTemp -> getNextPointer();
+        updated = updated -> getNodePointer();
+        copyTemp = copyTemp -> getNodePointer();
     }
     
     
