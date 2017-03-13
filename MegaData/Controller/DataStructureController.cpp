@@ -12,6 +12,10 @@
 #include "../Model/IntNodeArray.hpp"
 #include "../Model/List.hpp"
 #include "../Model/Queue.hpp"
+#include "../Model/FoodItem.hpp"
+#include "../Model/Stack.hpp"
+#include "../Model/CircularList.hpp"
+#include "../Model/DoubleList.hpp"
 
 using namespace std;
 
