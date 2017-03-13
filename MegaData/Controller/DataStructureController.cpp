@@ -25,7 +25,8 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    testListTiming();
+    testIntStack();
+    testFoodQueue();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
@@ -124,4 +125,24 @@ void DataStructureController :: testListTiming()
     
     cout << "When you do it in one diretion searching you get an average of: "  << averageSlow<< endl;
     cout << "When you do the BiDirectional way you get: " << averageFast << endl;
+}
+
+void DataStructureController:: testIntStack(){
+    Stack<int> numberStack;
+    numberStack.add(2315);
+    numberStack.push(178);
+    int testValue = numberStack.pop();
+    cout << "Test value is "<< testValue<< "and should be 178" << endl;
+}
+
+void DataStructureController:: testFoodQueue(){
+    Queue<FoodItem> tastyFood;
+    FoodItem chickenTaco("Chicken taco with lettuce");
+    
+    tastyFood.enqueue(chickenTaco);
+    FoodItem boring;
+    tastyFood.add(boring);
+    
+    FoodItem removed = tastyFood.dequeue();
+    cout << "The Item remoed from the queue was: " << removed.getFoodName() << " and should be: " << endl;
 }
