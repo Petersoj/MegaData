@@ -25,7 +25,7 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    testList();
+    testIntStack();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
@@ -128,18 +128,33 @@ void DataStructureController :: testListTiming()
 
 void DataStructureController:: testIntStack(){
     Stack<int> numberStack;
+    
     numberStack.push(811);
     numberStack.add(2315);
+    
+    cout << "Size of Stack: " << numberStack.getSize() << endl;
+    
     numberStack.push(00);
     numberStack.push(5555);
     numberStack.push(9898);
     
+    cout << "Size of Stack: " << numberStack.getSize() << endl;
+    
     int testValue = numberStack.pop();
-    cout << "Test value is "<< testValue<< "and should be 178" << endl;
+    cout << "Test value is " << testValue << " and should be 9898 " << endl;
+    
+    int otherTest = numberStack.remove(3);
+    cout << "Other test value is " << otherTest << " and should be 5555 " << endl;
+    
+    cout << "Size of Stack: " << numberStack.getSize() << endl;
+    
+    cout << endl;
+    
 }
 
 void DataStructureController:: testFoodQueue(){
     Queue<FoodItem> tastyFood;
+    
     FoodItem chickenTaco("Chicken taco with lettuce");
     
     tastyFood.enqueue(chickenTaco);
@@ -150,11 +165,6 @@ void DataStructureController:: testFoodQueue(){
     cout << "The Item remoed from the queue was: " << removed.getFoodName() << " and should be: " << endl;
 }
 
-
-
-void DataStructureController:: testStack(){
-    
-}
 
 void DataStructureController:: testQueue(){
     

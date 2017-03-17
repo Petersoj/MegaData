@@ -35,7 +35,6 @@ private:
     void testIntStack();
     void testFoodQueue();
     
-    void testStack();
     void testQueue();
     void testDoubleList();
     void testCircularList();

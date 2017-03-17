@@ -26,9 +26,6 @@ public:
     void enqueue(Type data);
     Type dequeue();
     Type peek();
-    
-    
-    
 };
 
 template <class Type>
@@ -44,13 +41,9 @@ Queue<Type> :: ~Queue()
     BiDirectionalNode<Type> * remove = this->getFront();
     while(this->getFront() != nullptr)
     {
-        
         this->setFront(this->getFront()->getNextPointer());
         delete remove;
         remove= this->getFront();
-       
-        
-        
     }
 }
 

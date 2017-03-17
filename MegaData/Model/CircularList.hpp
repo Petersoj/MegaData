@@ -23,7 +23,7 @@ public:
     void add(Type data);
     Type remove(int index);
     Type getFromIndex(int index);
-    Type seAtIndex(int index, Type data);
+    Type setAtIndex(int index, Type data);
 };
 
 template <class Type>
@@ -129,7 +129,7 @@ Type CircularList<Type>:: getFromIndex(int index){
 }
 
 template <class Type>
-Type CircularList<Type>:: seAtIndex(int index, Type data){
+Type CircularList<Type>:: setAtIndex(int index, Type data){
     assert(index >= 0 && index < this->getSize());
     
     Type replaced;
