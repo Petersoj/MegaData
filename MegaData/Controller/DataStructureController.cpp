@@ -25,8 +25,7 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    testIntStack();
-    testFoodQueue();
+    testList();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
@@ -129,8 +128,12 @@ void DataStructureController :: testListTiming()
 
 void DataStructureController:: testIntStack(){
     Stack<int> numberStack;
+    numberStack.push(811);
     numberStack.add(2315);
-    numberStack.push(178);
+    numberStack.push(00);
+    numberStack.push(5555);
+    numberStack.push(9898);
+    
     int testValue = numberStack.pop();
     cout << "Test value is "<< testValue<< "and should be 178" << endl;
 }
@@ -146,3 +149,22 @@ void DataStructureController:: testFoodQueue(){
     FoodItem removed = tastyFood.dequeue();
     cout << "The Item remoed from the queue was: " << removed.getFoodName() << " and should be: " << endl;
 }
+
+
+
+void DataStructureController:: testStack(){
+    
+}
+
+void DataStructureController:: testQueue(){
+    
+}
+
+void DataStructureController:: testDoubleList(){
+    
+}
+
+void DataStructureController:: testCircularList(){
+    
+}
+
