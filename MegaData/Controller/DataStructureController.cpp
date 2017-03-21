@@ -186,6 +186,6 @@ void DataStructureController:: testFoodQueue(){
     cout << "The Item dequeued from the queue was: " << dequeued.getFoodName() << endl;
     
     FoodItem removed = foods.dequeue();
-    cout << "The Item removed from the queue was: " << removed.getFoodName() << endl;
+    cout << "The Item removed from the queue was: " << removed.getFoodName() << endl << endl;
 }
 
