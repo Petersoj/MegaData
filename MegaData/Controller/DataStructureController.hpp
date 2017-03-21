@@ -35,10 +35,6 @@ private:
     void testIntStack();
     void testFoodQueue();
     
-    void testQueue();
-    void testDoubleList();
-    void testCircularList();
-    
 public:
     DataStructureController();
     void start();

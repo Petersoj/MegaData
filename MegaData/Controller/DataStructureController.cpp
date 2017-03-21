@@ -25,7 +25,7 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    testIntStack();
+    testFoodQueue();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
@@ -153,28 +153,39 @@ void DataStructureController:: testIntStack(){
 }
 
 void DataStructureController:: testFoodQueue(){
-    Queue<FoodItem> tastyFood;
+    Queue<FoodItem> foods;
     
     FoodItem chickenTaco("Chicken taco with lettuce");
+    chickenTaco.setCost(100);
+    chickenTaco.setCalories(2000);
+    chickenTaco.setDelicious(true);
     
-    tastyFood.enqueue(chickenTaco);
-    FoodItem boring;
-    tastyFood.add(boring);
+    FoodItem steakTaco("Steak taco with cheese");
+    steakTaco.setCost(200);
+    steakTaco.setCalories(1000);
+    steakTaco.setDelicious(true);
     
-    FoodItem removed = tastyFood.dequeue();
-    cout << "The Item remoed from the queue was: " << removed.getFoodName() << " and should be: " << endl;
-}
-
-
-void DataStructureController:: testQueue(){
+    FoodItem redBeets("Cooked red Beets");
+    redBeets.setCost(1);
+    redBeets.setCalories(60);
+    redBeets.setDelicious(false);
     
-}
-
-void DataStructureController:: testDoubleList(){
+    cout << "Size: " << foods.getSize() << endl;
     
-}
-
-void DataStructureController:: testCircularList(){
+    foods.enqueue(chickenTaco);
+    foods.add(steakTaco);
     
+    cout << "Size: " << foods.getSize() << endl;
+    
+    FoodItem firstItem = foods.peek();
+    cout << "Item in queue: " << firstItem.getFoodName() << endl;
+    
+    foods.enqueue(redBeets);
+    
+    FoodItem dequeued = foods.dequeue();
+    cout << "The Item dequeued from the queue was: " << dequeued.getFoodName() << endl;
+    
+    FoodItem removed = foods.dequeue();
+    cout << "The Item removed from the queue was: " << removed.getFoodName() << endl;
 }
 

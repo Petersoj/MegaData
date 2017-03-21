@@ -130,7 +130,7 @@ Type Queue<Type> :: dequeue()
 template<class Type>
 Type Queue<Type> :: peek()
 {
-     assert(this->getSize > 0);
+     assert(this->getSize() > 0);
      return this->getFront()->getNodeData();
 }
 
