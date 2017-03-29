@@ -9,6 +9,8 @@
 #ifndef DoubleList_h
 #define DoubleList_h
 
+#include "DoublyLinkedList.hpp"
+
 template <class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {

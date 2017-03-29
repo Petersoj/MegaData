@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37B5A9E01E8C2B6400E1919A /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37B5A9DE1E8C2B6400E1919A /* CrimeData.cpp */; };
 		37BE69221E7712C300DDBC4A /* FoodItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37BE69201E7712C300DDBC4A /* FoodItem.cpp */; };
+		37CE09811E89A0E80045FD44 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37CE097F1E89A0E80045FD44 /* FileController.cpp */; };
 		37D734D71E4BB8650074B516 /* DataStructureController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D734D41E4BB8650074B516 /* DataStructureController.cpp */; };
 		37D734D81E4BB8650074B516 /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D734D61E4BB8650074B516 /* NodeRunner.cpp */; };
 		37ED04AB1E71F27600398260 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37ED04A11E71F27600398260 /* IntNode.cpp */; };
@@ -28,8 +30,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37B5A9DE1E8C2B6400E1919A /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = MegaData/Model/CrimeData.cpp; sourceTree = "<group>"; };
+		37B5A9DF1E8C2B6400E1919A /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = MegaData/Model/CrimeData.hpp; sourceTree = "<group>"; };
 		37BE69201E7712C300DDBC4A /* FoodItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoodItem.cpp; path = MegaData/Model/FoodItem.cpp; sourceTree = "<group>"; };
 		37BE69211E7712C300DDBC4A /* FoodItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FoodItem.hpp; path = MegaData/Model/FoodItem.hpp; sourceTree = "<group>"; };
+		37CE097F1E89A0E80045FD44 /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = MegaData/Controller/FileController.cpp; sourceTree = "<group>"; };
+		37CE09801E89A0E80045FD44 /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = MegaData/Controller/FileController.hpp; sourceTree = "<group>"; };
 		37D734B71E4BB66D0074B516 /* MegaData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaData; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D734D41E4BB8650074B516 /* DataStructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStructureController.cpp; path = MegaData/Controller/DataStructureController.cpp; sourceTree = "<group>"; };
 		37D734D51E4BB8650074B516 /* DataStructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataStructureController.hpp; path = MegaData/Controller/DataStructureController.hpp; sourceTree = "<group>"; };
@@ -82,6 +88,8 @@
 		37D734C11E4BB68D0074B516 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37B5A9DE1E8C2B6400E1919A /* CrimeData.cpp */,
+				37B5A9DF1E8C2B6400E1919A /* CrimeData.hpp */,
 				37ED049C1E71F27600398260 /* Array.hpp */,
 				37ED049D1E71F27600398260 /* BiDirectionalNode.hpp */,
 				37ED049E1E71F27600398260 /* CircularList.hpp */,
@@ -109,6 +117,8 @@
 				37D734D41E4BB8650074B516 /* DataStructureController.cpp */,
 				37D734D51E4BB8650074B516 /* DataStructureController.hpp */,
 				37D734D61E4BB8650074B516 /* NodeRunner.cpp */,
+				37CE097F1E89A0E80045FD44 /* FileController.cpp */,
+				37CE09801E89A0E80045FD44 /* FileController.hpp */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -170,11 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B5A9E01E8C2B6400E1919A /* CrimeData.cpp in Sources */,
 				37ED04AB1E71F27600398260 /* IntNode.cpp in Sources */,
 				37ED04AC1E71F27600398260 /* IntNodeArray.cpp in Sources */,
 				37D734D71E4BB8650074B516 /* DataStructureController.cpp in Sources */,
 				37ED04AD1E71F27600398260 /* Timer.cpp in Sources */,
 				37BE69221E7712C300DDBC4A /* FoodItem.cpp in Sources */,
+				37CE09811E89A0E80045FD44 /* FileController.cpp in Sources */,
 				37D734D81E4BB8650074B516 /* NodeRunner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
