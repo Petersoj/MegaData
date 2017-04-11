@@ -18,7 +18,7 @@ private:
     BiDirectionalNode<Type> * previous;
     BiDirectionalNode<Type> * next;
     
-
+    
     
 public:
     BiDirectionalNode();
