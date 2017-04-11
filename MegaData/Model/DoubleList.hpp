@@ -28,6 +28,7 @@ public:
     Type getFromIndexFast(int index);
     int indexOf(Type findMe);
     int nextIndexOf(Type value, int position);
+    int alternateIndexOf(Type findMe);
 };
 
 template <class Type>
@@ -188,6 +189,29 @@ int DoubleList<Type> :: nextIndexOf(Type value, int position)
     current = current->getNextPointer();
     
     return nextIndex;
+}
+
+template <class Type>
+int DoubleList<Type> :: alternateIndexOf(Type findMe)
+{
+    int alternate=0;
+    
+    for (BiDirectionalNode<Type> * search = this->getFront();
+         search != nullptr;
+         search = search->getNextPointer())
+    {
+        if (findMe != search->getNodeData())
+        {
+            alternate++;
+        }
+    }
+    if(alternate >= this->getSize())
+    {
+        return -1;
+    }else
+    {
+        return alternate;
+    }
 }
 
 #endif /* DoubleList_h */
