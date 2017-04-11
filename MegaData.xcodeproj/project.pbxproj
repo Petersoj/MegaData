@@ -36,6 +36,7 @@
 		37BE69211E7712C300DDBC4A /* FoodItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FoodItem.hpp; path = MegaData/Model/FoodItem.hpp; sourceTree = "<group>"; };
 		37C1F5911E9D568200CDA04B /* BinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinarySearchTree.h; path = MegaData/Model/BinarySearchTree.h; sourceTree = "<group>"; };
 		37C1F5931E9D56E500CDA04B /* BinarySearchTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinarySearchTreeNode.h; path = MegaData/Model/BinarySearchTreeNode.h; sourceTree = "<group>"; };
+		37C1F5941E9D5CC100CDA04B /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Tree.h; path = MegaData/Model/Tree.h; sourceTree = "<group>"; };
 		37CE097F1E89A0E80045FD44 /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = MegaData/Controller/FileController.cpp; sourceTree = "<group>"; };
 		37CE09801E89A0E80045FD44 /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = MegaData/Controller/FileController.hpp; sourceTree = "<group>"; };
 		37D734B71E4BB66D0074B516 /* MegaData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaData; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +112,7 @@
 				37ED04A81E71F27600398260 /* Stack.hpp */,
 				37ED04A91E71F27600398260 /* Timer.cpp */,
 				37ED04AA1E71F27600398260 /* Timer.hpp */,
+				37C1F5941E9D5CC100CDA04B /* Tree.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";

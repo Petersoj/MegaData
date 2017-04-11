@@ -9,82 +9,100 @@
 #ifndef BinarySearchTree_h
 #define BinarySearchTree_h
 
-#include "Node.hpp"
+#include "BinarySearchTreeNode.h"
+#include "Tree.h"
 
-template <class Type>
-class BinarySearchTreeNode : public Node<Type>
+template<class Type>
+class BinarySearchTree: public Tree<Type>
 {
 private:
     BinarySearchTreeNode<Type> * root;
-    BinarySearchTreeNode<Type> * leftChild;
-    BinarySearchTreeNode<Type> * rightChild;
-    
+    int calculateSize(BinarySearchTreeNode<Type> * start);
+    void inOrderTraversal(BinarySearchTreeNode<Type> * root);
+    void preOrderTraversal(BinarySearchTreeNode<Type> * root);
+    void postOrderTraversal(BinarySearchTreeNode<Type> * root);
 public:
-    BinarySearchTreeNode();
-    BinarySearchTreeNode(Type data);
-    
-    BinarySearchTreeNode<Type> * getRootPointer();
-    BinarySearchTreeNode<Type> * getLeftPointer();
-    BinarySearchTreeNode<Type> * getRightPointer();
-    
-    void setRootPointer(BinarySearchTreeNode<Type> * root);
-    void setLeftChild(BinarySearchTreeNode<Type> * left);
-    void setRightChild(BinarySearchTreeNode<Type> * right);
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void inOrderTraversal();
+    void preOrderTraversal();
+    void postOrderTraversal();
+    BinarySearchTreeNode<Type> * getRoot();
+    void setRoot(BinarySearchTreeNode<Type> * root);
+    void printToFile();
 };
 
 template<class Type>
-BinarySearchTreeNode<Type>::BinarySearchTreeNode()
+BinarySearchTree<Type>::BinarySearchTree() :
+Tree<Type>()
 {
-    this->setNodeData(nullptr);
-    this->root = nullptr;
-    this->leftChild = nullptr;
-    this->rightChild = nullptr;
+    root = nullptr;
 }
 
 template<class Type>
-BinarySearchTreeNode<Type>::BinarySearchTreeNode(Type data) :
-Node<Type>(data)
+BinarySearchTree<Type>::~BinarySearchTree()
 {
-    this->root = nullptr;
-    this->leftChild = nullptr;
-    this->rightChild = nullptr;
+    
 }
 
-template <class Type>
-BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRootPointer()
+template<class Type>
+void BinarySearchTree<Type>::printToFile()
+{
+    
+}
+
+template<class Type>
+void BinarySearchTree<Type>::inOrderTraversal()
+{
+    
+}
+
+template<class Type>
+void BinarySearchTree<Type>::preOrderTraversal()
+{
+    
+}
+
+template<class Type>
+void BinarySearchTree<Type>::postOrderTraversal()
+{
+    
+}
+
+template<class Type>
+void BinarySearchTree<Type>::inOrderTraversal(BinarySearchTreeNode<Type> * root)
+{
+    
+}
+
+template<class Type>
+void BinarySearchTree<Type>::preOrderTraversal(BinarySearchTreeNode<Type> * root)
+{
+    
+}
+
+template<class Type>
+void BinarySearchTree<Type>::postOrderTraversal(BinarySearchTreeNode<Type> * root)
+{
+    
+}
+
+template<class Type>
+BinarySearchTreeNode<Type> * BinarySearchTree<Type>::getRoot()
 {
     return root;
 }
 
-template <class Type>
-BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getLeftPointer()
+template<class Type>
+void BinarySearchTree<Type>::setRoot(BinarySearchTreeNode<Type> * root)
 {
-    return leftChild;
+    this->root = root;
 }
 
 template<class Type>
-BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRightPointer()
+int BinarySearchTree<Type>::calculateSize(BinarySearchTreeNode<Type> * start)
 {
-    return rightChild;
+    
 }
-
-template<class Type>
-void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type> * root)
-{
-    this -> root = root;
-}
-
-template <class Type>
-void BinarySearchTreeNode<Type> :: setLeftChild(BinarySearchTreeNode<Type> * left)
-{
-    this->leftChild = left;
-}
-
-template <class Type>
-void BinarySearchTreeNode<Type> :: setRightChild(BinarySearchTreeNode<Type> * right)
-{
-    this->rightChild = right;
-}
-
 
 #endif /* BinarySearchTree_h */
