@@ -10,6 +10,7 @@
 #define CircularList_h
 
 #include "DoublyLinkedList.hpp"
+#include "BinarySearchTree.h"
 
 template <class Type>
 class CircularList : DoublyLinkedList<Type>
