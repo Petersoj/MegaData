@@ -34,6 +34,7 @@ private:
     void testNodes();
     void testIntStack();
     void testFoodQueue();
+    void testBinarySearchTreeOperations();
     
 public:
     DataStructureController();
