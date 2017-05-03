@@ -17,6 +17,9 @@
 #include "../Model/CircularList.hpp"
 #include "../Model/DoubleList.hpp"
 #include "../Model/BinarySearchTree.h"
+#include "../Model/AVLTree.h"
+#include "../Model/CrimeData.hpp"
+#include "FileController.hpp"
 
 using namespace std;
 
@@ -26,7 +29,7 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    testFoodQueue();
+    testAVLData();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
@@ -223,5 +226,35 @@ void DataStructureController :: testBinarySearchTreeOperations()
     
     cout << "Balanced should be false || 0 and is: " << numbers.isBalanced() << endl;
     
+}
+
+void DataStructureController:: testAVLData(){
+    FileController fileData;
+    
+    Timer treeTimer;
+    
+    treeTimer.startTimer();
+    
+    AVLTree<CrimeData> crimeTree = fileData.readCrimeDataToAVLTree("/Users/jpet4781/Documents/c++/MegaData/MegaData/Assets/crime.csv");
+    
+    treeTimer.stopTimer();
+    
+    
+    
+    int count = crimeTree.getSize();
+    
+    int height = crimeTree.getHeight();
+    
+    bool complete = crimeTree.isComplete();
+    
+    bool balanced = crimeTree.isBalanced();
+    
+    
+    
+    cout << "The count of the tree is: " << count << ", the height is " << height << ".\n The tree's balanced status is " << balanced << ", and its complete status is " << complete << endl;
+    
+    cout << "The time to read in the tree was: " << endl;
+    
+    treeTimer.displayTimerInformation();
 }
 
