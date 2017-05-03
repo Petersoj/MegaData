@@ -1,9 +1,9 @@
 //
 //  FileController.hpp
-//  MegaData
+//  ArrayProject
 //
-//  Created by Peterson, Jacob on 3/27/17.
-//  Copyright © 2017 Peterson, Jacob. All rights reserved.
+//  Created by Smith, Arick on 3/27/17.
+//  Copyright © 2017 Smith, Arick. All rights reserved.
 //
 
 #ifndef FileController_hpp
@@ -11,20 +11,33 @@
 
 #include "../Model/DoubleList.hpp"
 #include "../Model/FoodItem.hpp"
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <fstream>
+#include "../Model/CrimeData.hpp"
+#include "../Model/BinarySearchTree.h"
+#include "../Model/AVLTree.h"
+#include <string> // String access
+#include <fstream> // File operations
+#include <iostream> // Console thing
+#include <sstream> // String as stream
+
 
 using namespace std;
 
-class FileController{
+class FileController
+{
 private:
     DoubleList<FoodItem> foodItemList;
     
+    
 public:
     DoubleList<FoodItem> readDataFromFile(string filename);
-    void writeFoodItemDataStatistis(DoubleList<FoodItem> sourc, string filename);
+    void writeFoodDataStatistics(DoubleList<FoodItem> source, string fileName);
+    BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
+    AVLTree<CrimeData> readCrimeDataToAVLTree(string filename);
 };
+
+
+
+
+
 
 #endif /* FileController_hpp */

@@ -2,7 +2,7 @@
 //  CrimeData.hpp
 //  MorningMegaProject
 //
-//  Created by Cody Henrichsen on 3/27/17.
+//  Created by Arick Smith on 3/27/17.
 //  Copyright © 2017 CTEC. All rights reserved.
 //
 
@@ -39,6 +39,7 @@ private:
     int year;
 public:
     CrimeData();
+    CrimeData(string dataLine);
     
     string getDepartment() const;
     int getPopulation() const;
@@ -89,6 +90,8 @@ public:
     bool operator < (const CrimeData & other);
     bool operator > (const CrimeData & other);
     bool operator == (const CrimeData & other);
+    
+    friend ostream & operator << (ostream &outputStream, const CrimeData & outputData);
 };
 
 #endif /* CrimeData_hpp */

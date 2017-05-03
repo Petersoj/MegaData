@@ -31,6 +31,8 @@ public:
     void setFront(BiDirectionalNode<Type> * front);
     void setSize(int updated);
     void setEnd(BiDirectionalNode<Type> * end);
+    
+    
 };
 template <class Type>
 DoublyLinkedList<Type> :: DoublyLinkedList()

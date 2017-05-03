@@ -37,7 +37,7 @@ public:
     Node<Type> * getFront() const;
     Type getFromIndex(int index);
     int getSize() const;
-    int indexOf(Type toFind);
+    int indexOf(Type findMe);
 };
 
 template <class Type>
@@ -150,22 +150,20 @@ Node<Type> * Array<Type> :: Array<Type> :: getFront() const
 }
 
 template <class Type>
-int Array<Type> :: indexOf(Type toFind){
+int Array<Type> :: indexOf(Type findMe)
+{
     int index = -1;
     
     Node<Type> * searchPointer = this->getFront();
-    
-    for (int spot = 0; spot < this->getSize(); spot++)
+    for(int spot = 0; spot < this->getSize(); spot++)
     {
-        if(toFind == searchPointer->getNodeData())
+        if(findMe == searchPointer->getNodeData())
         {
             return spot;
         }
         searchPointer = searchPointer->getNextPointer();
     }
-    
     return index;
+    
 }
-
-
 #endif /* Array_h */

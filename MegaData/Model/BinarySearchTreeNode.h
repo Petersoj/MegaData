@@ -1,9 +1,9 @@
 //
-//  BinarySearchTreeNode.h
-//  MegaData
+//  Header.h
+//  ArrayProject
 //
-//  Created by Peterson, Jacob on 4/11/17.
-//  Copyright © 2017 Peterson, Jacob. All rights reserved.
+//  Created by Smith, Arick on 4/11/17.
+//  Copyright © 2017 Smith, Arick. All rights reserved.
 //
 
 #ifndef BinarySearchTreeNode_h
@@ -14,7 +14,7 @@
 template <class Type>
 class BinarySearchTreeNode : public Node<Type>
 {
-    
+
 private:
     
     BinarySearchTreeNode<Type> * root;
@@ -26,11 +26,11 @@ public:
     BinarySearchTreeNode();
     ~BinarySearchTreeNode();
     BinarySearchTreeNode(Type data);
-    
+
     BinarySearchTreeNode<Type> * getRootPointer();
     BinarySearchTreeNode<Type> * getLeftChild();
     BinarySearchTreeNode<Type> * getRightChild();
-    
+
     void setRootPointer(BinarySearchTreeNode<Type> * root);
     void setLeftChild(BinarySearchTreeNode<Type> * left);
     void setRightChild(BinarySearchTreeNode<Type> * right);
@@ -40,9 +40,10 @@ public:
 template <class Type>
 BinarySearchTreeNode<Type> :: BinarySearchTreeNode() : Node<Type>()
 {
+    this->setNodeData(nullptr);
     this->root = nullptr;
-    this->frontChild = nullptr;
     this->leftChild = nullptr;
+    this->rightChild = nullptr;
     
 }
 
@@ -57,27 +58,34 @@ template <class Type>
 BinarySearchTreeNode<Type> :: BinarySearchTreeNode(Type data) : Node<Type>(data)
 {
     this->root = nullptr;
-    this->rightChild = nullptr;
     this->leftChild = nullptr;
+    this->rightChild = nullptr;
     
 }
+
+
+
+
+
+
+
 
 template <class Type>
 BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getLeftChild()
 {
-    return this->leftChild;
+    return leftChild;
 }
 
 template <class Type>
 BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRightChild()
 {
-    return this->rightChild;
+    return rightChild;
 }
 
 template <class Type>
 BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRootPointer()
 {
-    return this->root;
+    return root;
 }
 
 template <class Type>
@@ -97,4 +105,5 @@ void BinarySearchTreeNode<Type> :: setRightChild(BinarySearchTreeNode<Type> * ri
 {
     this->rightChild = rightChild;
 }
-#endif /* BinarySearchTreeNode_h */
+
+#endif /*BinarySearchTreeNode_h*/

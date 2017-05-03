@@ -1,14 +1,16 @@
 //
 //  Tree.h
-//  MegaData
+//  ArrayProject
 //
-//  Created by Peterson, Jacob on 4/11/17.
-//  Copyright © 2017 Peterson, Jacob. All rights reserved.
+//  Created by Smith, Arick on 4/11/17.
+//  Copyright © 2017 Smith, Arick. All rights reserved.
 //
 
-#ifndef Tree_h
+
+
+// //  Tree.hpp //  MorningMegaProject // //  Created by Aricck Smith on 3/30/17. //  Copyright Â© 2017 CTEC. All rights reserved. //
+#ifndef Tree_h 
 #define Tree_h
-
 #include <assert.h>
 
 template <class Type> class Tree
@@ -29,3 +31,4 @@ public:
     virtual void remove(Type value) = 0;
 };
 #endif /* Tree_h */
+    

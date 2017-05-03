@@ -8,7 +8,6 @@
 
 #ifndef BiDirectionalNode_h
 #define BiDirectionalNode_h
-
 #include "Node.hpp"
 
 template <class Type>
@@ -18,7 +17,7 @@ private:
     BiDirectionalNode<Type> * previous;
     BiDirectionalNode<Type> * next;
     
-    
+
     
 public:
     BiDirectionalNode();

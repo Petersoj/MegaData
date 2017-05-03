@@ -1,68 +1,84 @@
 //
-//  FoodItem.cpp
-//  MegaData
+//  foodItem.cpp
+//  ArrayProject
 //
-//  Created by Peterson, Jacob on 3/13/17.
-//  Copyright © 2017 Peterson, Jacob. All rights reserved.
+//  Created by Smith, Arick on 3/13/17.
+//  Copyright © 2017 Smith, Arick. All rights reserved.
 //
 
-#include "FoodItem.hpp"
+#include "foodItem.hpp"
 
-FoodItem ::  FoodItem(){
-    this->calories = 666;
-    this->foodName = "Taco Time";
-    this->cost=123.21;
+FoodItem :: FoodItem()
+{
+    this->calories = 999;
+    this->foodName = "rotten";
+    this->cost = 676767767.44;
     this->delicious = false;
 }
 
-FoodItem :: FoodItem(string name){
-    this->calories = 666;
+FoodItem :: FoodItem(string name)
+{
+    this->cost = 676767767.44;
+    this->delicious = false;
+    this->calories = 999;
     this->foodName = name;
-    this->cost=123.21;
-    this->delicious = false;
 }
 
-int FoodItem:: getCalories(){
+int FoodItem :: getCalories()
+{
     return calories;
 }
 
-double FoodItem:: getCost(){
+double FoodItem :: getCost()
+
+{
     return cost;
 }
 
-string FoodItem:: getFoodName(){
+string FoodItem :: getFoodName()
+
+{
     return foodName;
 }
 
-bool FoodItem:: isDelicious(){
+bool FoodItem :: isDelicious()
+
+{
     return delicious;
 }
 
-void FoodItem:: setCalories(int cals){
-    this->calories = cals;
+void FoodItem :: setCalories(int calories)
+{
+    this->calories = calories;
 }
 
-void FoodItem:: setCost(double cost){
-    this->cost = cost;
-}
-
-void FoodItem :: setFoodName(string foodName){
+void FoodItem :: setFoodName(string foodName)
+{
     this->foodName = foodName;
 }
 
-void FoodItem:: setDelicious(bool delicious){
+void FoodItem :: setDelicious(bool delicious)
+{
     this->delicious = delicious;
 }
+
+void FoodItem :: setCost(double cost)
+{
+    this->cost= cost;
+}
+
 
 bool FoodItem :: operator < (FoodItem & otherFood)
 {
     if(this->isDelicious() && otherFood.isDelicious())
     {
-        if(this->getCalories() < otherFood.getCalories())
+        if(this->getCalories() > otherFood.getCalories())
         {
+            
             return true;
         }
         return false;
     }
     return false;
 }
+

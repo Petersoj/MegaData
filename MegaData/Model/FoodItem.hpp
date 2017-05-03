@@ -1,17 +1,15 @@
 //
-//  FoodItem.hpp
-//  MegaData
+//  foodItem.hpp
+//  ArrayProject
 //
-//  Created by Peterson, Jacob on 3/13/17.
-//  Copyright © 2017 Peterson, Jacob. All rights reserved.
+//  Created by Smith, Arick on 3/13/17.
+//  Copyright © 2017 Smith, Arick. All rights reserved.
 //
 
-#ifndef FoodItem_hpp
-#define FoodItem_hpp
+#ifndef foodItem_hpp
+#define foodItem_hpp
 
-#include "FoodItem.hpp"
 #include <string>
-
 using namespace std;
 
 class FoodItem
@@ -21,13 +19,15 @@ private:
     string foodName;
     double cost;
     bool delicious;
+    
+    
 public:
     FoodItem();
     FoodItem(string name);
     
     int getCalories();
-    double getCost();
     string getFoodName();
+    double getCost();
     bool isDelicious();
     
     void setCalories(int calories);
@@ -35,9 +35,11 @@ public:
     void setCost(double cost);
     void setDelicious(bool delicious);
     
+    
     bool operator < (FoodItem & otherFood);
     bool operator > (FoodItem & otherFood);
     bool operator == (FoodItem & otherFood);
+    
 };
 
-#endif /* FoodItem_hpp */
+#endif /* foodItem_hpp */

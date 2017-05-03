@@ -16,6 +16,7 @@
 #include "../Model/Stack.hpp"
 #include "../Model/CircularList.hpp"
 #include "../Model/DoubleList.hpp"
+#include "../Model/BinarySearchTree.h"
 
 using namespace std;
 

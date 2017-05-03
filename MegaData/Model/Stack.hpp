@@ -38,21 +38,14 @@ Stack<Type>:: ~Stack()
     BiDirectionalNode<Type> * remove = this->getFront();
     while(this->getFront() != nullptr)
     {
+        
         this->setFront(this->getFront()->getNextPointer());
         delete remove;
         remove= this->getFront();
+        
+        
+        
     }
-}
-
-template <class Type>
-void Stack<Type> :: add(Type add){
-    push(add);
-}
-
-template <class Type>
-Type Stack<Type> :: remove(int index){
-    assert(index == this->getSize() - 1);
-    return pop();
 }
 
 template <class Type>
@@ -99,5 +92,14 @@ Type Stack<Type> ::peek()
     return this->getEnd()->getNodeData();
 }
 
+template <class Type>
+void Stack<Type> :: add(Type add){
+    push(add);
+}
 
+template <class Type>
+Type Stack<Type> :: remove(int index){
+    assert(index == this->getSize() - 1);
+    return pop();
+}
 #endif /* Stack_h */
