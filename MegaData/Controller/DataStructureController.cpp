@@ -257,6 +257,17 @@ void DataStructureController:: testAVLTreeOperation(){
     
     numbers.inOrderTraversal();
     
+    numbers.preOrderTraversal();
+    
+    numbers.postOrderTraversal();
+    
+    numbers.insert(92165); // won't go in
+    
+    numbers.insert(2);
+    
+    numbers.remove(10);
+    
+    numbers.remove(2);
     
     
     cout << "Height should be 4 and is: " << numbers.getHeight() << endl;
