@@ -30,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37053DFF1EC24F8F0058D1CA /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Graph.h; path = MegaData/Model/Graph.h; sourceTree = "<group>"; };
 		37B6E5B91EBA61CF00988857 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = MegaData/Model/Array.hpp; sourceTree = "<group>"; };
 		37B6E5BA1EBA61CF00988857 /* AVLTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVLTree.h; path = MegaData/Model/AVLTree.h; sourceTree = "<group>"; };
 		37B6E5BB1EBA61CF00988857 /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = MegaData/Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		37B6E5B81EBA61AD00988857 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37053DFF1EC24F8F0058D1CA /* Graph.h */,
 				37B6E5B91EBA61CF00988857 /* Array.hpp */,
 				37B6E5BA1EBA61CF00988857 /* AVLTree.h */,
 				37B6E5BB1EBA61CF00988857 /* BiDirectionalNode.hpp */,
