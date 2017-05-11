@@ -2,7 +2,7 @@
 //  CrimeData.cpp
 //  MorningMegaProject
 //
-//  Created by Arick Smith on 3/27/17.
+//  Created by Jacob Peterson on 3/27/17.
 //  Copyright © 2017 CTEC. All rights reserved.
 //
 
