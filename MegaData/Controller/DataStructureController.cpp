@@ -31,7 +31,7 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    testHashTable();
+    testGraph();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
@@ -328,15 +328,28 @@ void DataStructureController:: testHashTable(){
 void DataStructureController:: testGraph(){
     Graph<string> brainNetwork;
     
-    brainNetwork.addVertex("Memory of Grandma's Death");
-    brainNetwork.addVertex("Memory of Rainy Day");
-    brainNetwork.addVertex("Memory of Broken Umbrella and muddy shoes");
-    brainNetwork.addVertex("Memory of Fun in the rain");
-    brainNetwork.addVertex("Memory of slipping and concussion");
-    brainNetwork.addVertex("Memory of Emergeny Room");
-    brainNetwork.addVertex("Memory of lightning power outage");
-    brainNetwork.addVertex("Memory of building on fire");
+    brainNetwork.addVertex("Memory of Grandma's Death"); // 0
+    brainNetwork.addVertex("Memory of Rainy Day"); // 1
+    brainNetwork.addVertex("Memory of Broken Umbrella and muddy shoes"); // 2
+    brainNetwork.addVertex("Memory of Fun in the rain"); // 3
+    brainNetwork.addVertex("Memory of slipping and concussion"); // 4
+    brainNetwork.addVertex("Memory of Emergeny Room"); // 5
+    brainNetwork.addVertex("Memory of lightning power outage"); // 6
+    brainNetwork.addVertex("Memory of building on fire"); // 7
     
-    brainNetwork.addEd
+    brainNetwork.addEdge(0, 1);
+    brainNetwork.addEdge(0, 6);
+    brainNetwork.addEdge(1, 2);
+    brainNetwork.addEdge(2, 3);
+    brainNetwork.addEdge(3, 4);
+    brainNetwork.addEdge(4, 5);
+    brainNetwork.addEdge(6, 7);
+    brainNetwork.addEdge(7, 0);
+    
+    brainNetwork.depthFirstTraversal(brainNetwork, 0);
+    
+    cout << endl;
+    
+    brainNetwork.breadthFirstTraversal(brainNetwork, 0);
 }
 
