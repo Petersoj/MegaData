@@ -2,7 +2,7 @@
 //  Timer.cpp
 //  FirstCPlusPlus
 //
-//  Created by Smith, Arick on 1/31/17.
+//  Created by Peterson, Jacob on 1/31/17.
 //  Copyright © 2017 CTEC. All rights reserved.
 //
 

@@ -2,8 +2,8 @@
 //  HashNode.h
 //  ArrayProject
 //
-//  Created by Smith, Arick on 5/1/17.
-//  Copyright © 2017 Smith, Arick. All rights reserved.
+//  Created by Peterson, Jacob on 5/1/17.
+//  Copyright © 2017 Peterson, Jacob. All rights reserved.
 //
 
 #ifndef HashNode_h
@@ -17,12 +17,12 @@ private:
     long key;
     
 public:
-    HashNOde();
+    HashNode();
     HashNode(Type data);
     
     Type getData();
     long getKey() const;
-    void setData(type data);
+    void setData(Type data);
 };
 
 template <class Type>

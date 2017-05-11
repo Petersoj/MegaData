@@ -37,6 +37,8 @@ private:
     void testBinarySearchTreeOperations();
     void testAVLData();
     void testAVLTreeOperation();
+    void testHashTable();
+    void testGraph();
 public:
     DataStructureController();
     void start();

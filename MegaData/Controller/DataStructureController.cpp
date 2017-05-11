@@ -19,7 +19,9 @@
 #include "../Model/BinarySearchTree.h"
 #include "../Model/AVLTree.h"
 #include "../Model/CrimeData.hpp"
+#include "../Model/HashTable.h"
 #include "FileController.hpp"
+#include "../Model/Graph.h"
 
 using namespace std;
 
@@ -29,7 +31,7 @@ DataStructureController :: DataStructureController(){
 }
 
 void DataStructureController :: start(){
-    testAVLTreeOperation();
+    testHashTable();
 }
 
 void DataStructureController:: testAdvancedFeatures(){
@@ -303,5 +305,38 @@ void DataStructureController:: testAVLData(){
     cout << "The time to read in the tree was: " << endl;
     
     treeTimer.displayTimerInformation();
+}
+
+void DataStructureController:: testHashTable(){
+    HashTable<int> hashTable;
+    hashTable.add(4);
+    hashTable.add(5);
+    hashTable.add(6);
+    hashTable.add(14);
+    hashTable.add(16);
+    hashTable.add(19);
+    hashTable.add(24);
+    hashTable.add(35);
+    hashTable.add(46);
+    hashTable.add(64);
+    
+    hashTable.displayContents();
+    HashNode<int> number;
+    number.setData(4);
+}
+
+void DataStructureController:: testGraph(){
+    Graph<string> brainNetwork;
+    
+    brainNetwork.addVertex("Memory of Grandma's Death");
+    brainNetwork.addVertex("Memory of Rainy Day");
+    brainNetwork.addVertex("Memory of Broken Umbrella and muddy shoes");
+    brainNetwork.addVertex("Memory of Fun in the rain");
+    brainNetwork.addVertex("Memory of slipping and concussion");
+    brainNetwork.addVertex("Memory of Emergeny Room");
+    brainNetwork.addVertex("Memory of lightning power outage");
+    brainNetwork.addVertex("Memory of building on fire");
+    
+    brainNetwork.addEd
 }
 

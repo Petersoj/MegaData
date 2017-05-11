@@ -2,8 +2,8 @@
 //  CircularList.hpp
 //  ArrayProject
 //
-//  Created by Smith, Arick on 3/1/17.
-//  Copyright © 2017 Smith, Arick. All rights reserved.
+//  Created by Peterson, Jacob on 3/1/17.
+//  Copyright © 2017 Peterson, Jacob. All rights reserved.
 //
 
 #ifndef CircularList_h

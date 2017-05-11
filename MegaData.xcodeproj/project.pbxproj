@@ -78,7 +78,6 @@
 		37B6E5B81EBA61AD00988857 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				37053DFF1EC24F8F0058D1CA /* Graph.h */,
 				37B6E5B91EBA61CF00988857 /* Array.hpp */,
 				37B6E5BA1EBA61CF00988857 /* AVLTree.h */,
 				37B6E5BB1EBA61CF00988857 /* BiDirectionalNode.hpp */,
@@ -91,6 +90,7 @@
 				37B6E5C21EBA61CF00988857 /* DoublyLinkedList.hpp */,
 				37B6E5C31EBA61CF00988857 /* FoodItem.cpp */,
 				37B6E5C41EBA61CF00988857 /* FoodItem.hpp */,
+				37053DFF1EC24F8F0058D1CA /* Graph.h */,
 				37B6E5C51EBA61CF00988857 /* HashNode.h */,
 				37B6E5C61EBA61CF00988857 /* HashTable.h */,
 				37B6E5C71EBA61CF00988857 /* IntNode.cpp */,

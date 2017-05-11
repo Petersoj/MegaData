@@ -2,8 +2,8 @@
 //  Graph.h
 //  ArrayProject
 //
-//  Created by Smith, Arick on 5/9/17.
-//  Copyright © 2017 Smith, Arick. All rights reserved.
+//  Created by Peterson, Jacob on 5/9/17.
+//  Copyright © 2017 Peterson, Jacob. All rights reserved.
 //
 
 #ifndef Graph_h
@@ -54,8 +54,7 @@ Graph<Type> :: Graph()
 template <class Type>
 Graph<Type> :: ~Graph()
 {
-    delete [] this->adjacencyMAtrix;
-    delete [] this->graphData;
+
 }
 
 template <class Type>
@@ -180,7 +179,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bo
     {
         if(!visited[*setIterator])
         {
-              depthFirstTraversal(currentGraph, *setIterator, visited);
+            depthFirstTraversal(currentGraph, *setIterator, visited);
         }
     }
     
@@ -189,7 +188,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bo
 template <class Type>
 void Graph<Type> :: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
 {
-   
+    
     assert(vertex < currentGraph.size());
     bool visited[MAXIMUM];
     std::set<int> connections;

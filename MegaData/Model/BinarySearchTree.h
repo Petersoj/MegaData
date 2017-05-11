@@ -2,8 +2,8 @@
 //  BinarySearchTree.h
 //  ArrayProject
 //
-//  Created by Smith, Arick on 4/11/17.
-//  Copyright © 2017 Smith, Arick. All rights reserved.
+//  Created by Peterson, Jacob on 4/11/17.
+//  Copyright © 2017 Peterson, Jacob. All rights reserved.
 //
 
 #ifndef BinarySearchTree_h
