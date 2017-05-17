@@ -8,7 +8,7 @@
 
 
 
-// //  Tree.hpp //  MorningMegaProject // //  Created by Aricck Smith on 3/30/17. //  Copyright Â© 2017 CTEC. All rights reserved. //
+// //  Tree.hpp //  MorningMegaProject // //  Created by Aricck Peterson on 3/30/17. //  Copyright Â© 2017 CTEC. All rights reserved. //
 #ifndef Tree_h 
 #define Tree_h
 #include <assert.h>

@@ -51,7 +51,7 @@ HashTable<Type> :: HashTable()
     this->capacity = 101;
     this->efficiencyPercentage = .667;
     this->size = 0;
-    this->hashTableStorage = new HashNode<Type> * [capacity]();
+    this->hashTableStorage = new HashNode<Type> * [capacity];
     std :: fill_n(hashTableStorage, capacity, nullptr);
 }
 
@@ -64,7 +64,7 @@ HashTable<Type> :: ~HashTable()
 template<class Type>
 long HashTable<Type> :: nextPrime()
 {
-    int nextPrime = (this->capacity * 2) + 1;
+    long nextPrime = this->capacity * 2 + 1;
     
     while(!isPrime(nextPrime))
     {
